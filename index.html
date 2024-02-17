@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basic caluclator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- bootstap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat:wght@800;900&family=PT+Serif:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Basic Calculator</h1>
+    <div class="mainbody">
+      <div class="formstyle">
+        <p class="text-white">Casio k-45</p>
+        <form name="form1">
+          <!-- This input box shows the button pressed by the user in calculator. -->
+          <input id="calc" type="text" name="answer" class="rounded-pill" />
+          <br />
+          <br />
+          <!-- Display the calculator button on the screen. -->
+          <!-- onclick() function display the number prsses by the user. -->
+          <button type="button" class="btn btn-primary">
+            <input
+              class="bg-primary"
+              type="button"
+              value="1"
+              onclick="form1.answer.value += '1' "
+            />
+          </button>
+
+          <button type="button" class="btn btn-primary">
+            <input
+              class="bg-primary"
+              type="button"
+              value="2"
+              onclick="form1.answer.value += '2' "
+            />
+          </button>
+          <button type="button" class="btn btn-primary">
+            <input
+              class="bg-primary"
+              type="button"
+              value="3"
+              onclick="form1.answer.value += '3' "
+            />
+          </button>
+          <button type="button" class="btn btn-danger">
+            <input
+              class="bg-danger"
+              type="button"
+              value="+"
+              onclick="form1.answer.value += '+' "
+            />
+          </button>
+          <br />
+          <br />
+
+          <button type="button" class="btn btn-primary">
+            <input
+              class="bg-primary"
+              type="button"
+              value="4"
+              onclick="form1.answer.value += '4' "
+            />
+          </button>
+          <button type="button" class="btn btn-primary">
+            <input
+              class="bg-primary"
+              type="button"
+              value="5"
+              onclick="form1.answer.value += '5' "
+            />
+          </button>
+          <button type="button" class="btn btn-primary">
+            <input
+              class="bg-primary"
+              type="button"
+              value="6"
+              onclick="form1.answer.value += '6' "
+            />
+          </button>
+          <button type="button" class="btn btn-danger">
+            <input
+              class="bg-danger"
+              type="button"
+              value="-"
+              onclick="form1.answer.value += '-' "
+            />
+          </button>
+          <br />
+          <br />
+
+          <button type="button" class="btn btn-primary">
+            <input
+              class="bg-primary"
+              type="button"
+              value="7"
+              onclick="form1.answer.value += '7' "
+            />
+          </button>
+          <button type="button" class="btn btn-primary">
+            <input
+              class="bg-primary"
+              type="button"
+              value="8"
+              onclick="form1.answer.value += '8' "
+            />
+          </button>
+          <button type="button" class="btn btn-primary">
+            <input
+              class="bg-primary"
+              type="button"
+              value="9"
+              onclick="form1.answer.value += '9' "
+            />
+          </button>
+          <button type="button" class="btn btn-danger">
+            <input
+              class="bg-danger"
+              type="button"
+              value="*"
+              onclick="form1.answer.value += '*' "
+            />
+          </button>
+          <br />
+          <br />
+
+          <button type="button" class="btn btn-danger">
+            <input
+              class="bg-danger"
+              type="button"
+              value="/"
+              onclick="form1.answer.value += '/' "
+            />
+          </button>
+          <button type="button" class="btn btn-danger">
+            <input
+              class="bg-danger"
+              type="button"
+              value="0"
+              onclick="form1.answer.value += '0' "
+            />
+          </button>
+          <button type="button" class="btn btn-danger">
+            <input
+              class="bg-danger"
+              type="button"
+              value="."
+              onclick="form1.answer.value += '.' "
+            />
+          </button>
+          <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->
+          <button type="button" class="btn btn-danger">
+            <input
+              class="bg-danger"
+              type="button"
+              value="="
+              onclick="form1.answer.value = eval(form1.answer.value) "
+            />
+          </button>
+
+          <br />
+          <!-- Display the Cancel button and erase all data entered by the user. -->
+          <button type="button" class="btn btn-danger mt-4">
+            <input
+              class="bg-danger"
+              type="button"
+              value="Clear"
+              onclick="form1.answer.value = ' ' "
+              id="clear"
+            />
+          </button>
+
+          <button type="button" class="btn btn-danger mt-4">
+            <input
+              class="bg-danger"
+              type="button"
+              value="More"
+              onclick="form1.answer.value = ' ' "
+              id="clear"
+            />
+          </button>
+
+          <br />
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
